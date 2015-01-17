@@ -1,0 +1,29 @@
+<!--
+Este no es un fichero HTML independiente. Debe llamarse usando showModalDialog()
+Ejemplo:
+var p = showModalDialog("Dialogs/DlgAskFile.html", ["FicheroPorDefecto"], "dialogwidth:400, dialogheight:300, resizable:no");
+
+-->
+<form>
+<fieldset id="fields">
+<label><input id="dlgF1"></label>
+</fieldset>
+<div style="text-align:center"> <!-- Buttons to dismiss the dialog -->
+<button onclick="okay()">OK</button> <!-- Set return value and close -->
+<button onclick="cancel()">Cancela</button> <!-- Close with no return value -->
+</div>
+<script>
+// Create the HTML for the dialog body and display it in the fieldset
+document.getElementById("dlgF1").value = dialogArguments[1];
+
+
+// Close the dialog without setting a return value
+function cancel() { window.close(); }
+
+// Read the input field values and set a return value, then close
+function okay() {
+window.returnValue = document.getElementById("dlgF1").value;
+window.close(); // Close the dialog. This makes showModalDialog() return.
+}
+</script>
+</form>

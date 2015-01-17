@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pruebas</title>
+<LINK href="Styles/qunit.css" rel="stylesheet" type="text/css">
+
+<script src="Scripts/qunit.js"></script>
+<script src="Scripts/default.js"></script>
+<script src="Scripts/tests.js"></script>
+
+<script type="text/javascript">
+<!--
+var NombreFichero = "";
+
+function WindowOnLoad(){
+	if(localStorage){
+		//alert("Si tienes LocalStorage");
+	}else{
+		alert("No tienes LocalStorage");
+	}
+}
+
+function IdFile(){
+	NombreFichero = localStorage.getItem("NombreFichero");
+	if (NombreFichero==null)
+		alert("No está guardado el nombre del archivo");
+		NombreFichero="No Existe";
+	}
+
+window.onload = function(){
+	WindowOnLoad();	
+-->
+}
+</script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  
+</body>
+</html>

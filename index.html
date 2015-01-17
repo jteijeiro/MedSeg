@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<LINK href="Styles/estilos.css" rel="stylesheet" type="text/css">
+<LINK href="Styles/qunit.css" rel="stylesheet" type="text/css">
+
+<script src="Scripts/qunit.js"></script>
+<script src="Scripts/default.js"></script>
+<script src="Scripts/tests.js"></script>
+
+<script type="text/javascript">
+<!--
+var NombreFichero = "";
+
+function WindowOnLoad(){
+	if(localStorage){
+		//alert("Si tienes LocalStorage");
+	}else{
+		alert("No tienes LocalStorage");
+	}
+}
+
+function IdFile(){
+	NombreFichero = localStorage.getItem("NombreFichero");
+	if (NombreFichero==null){
+		alert("No está guardado el nombre del archivo");
+		NombreFichero="No Existe";
+		var dlg=getElementById("AskFileName");
+		dlg.showModal();
+		
+		}
+	}
+
+window.onload = function(){
+	WindowOnLoad();	
+-->
+}
+</script>
+</head>
+<body>
+<h1>Seguimiento</h1>
+	<span>
+		<p id="ip1">
+		</p>
+	</span>
+<!--  -->
+<dialog id="DlgAskFileName">
+<input type=text id="Dlg_Input_Nombre"/>
+<button id="DlgAskFileNameCancel">Cancelar</button>
+<button id="DlgAskFileNameOK">OK</button>
+</dialog>
+<!--  -->
+<script>
+	document.ip1.text=NombreFichero;
+</script>
+
+</body>
+</html>

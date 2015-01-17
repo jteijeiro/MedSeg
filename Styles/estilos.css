@@ -1,0 +1,9 @@
+#DlgAskFileNameg {
+    width:50%;
+    background-color:#F4FFEF;
+    border:1px dotted black;
+}
+p{
+	text-align: center;
+	color: blue;
+	}
